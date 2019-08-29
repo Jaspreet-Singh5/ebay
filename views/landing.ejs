@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <Title>ebay</Title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+        <link href="./stylesheets/landing.css" rel="stylesheet" type="text/css" />
+        
+        <script src="https://kit.fontawesome.com/9c495d6498.js"></script>
+    </head>
+    
+    <body class="container">
+        
+        <div class="animatedFrame">
+            this is an animated frame
+        </div>
+        
+        <div class="navbar">
+            <ul>
+                <li>login</li>
+                <li>register</li>
+                <li>wishlist</li>
+                <li>checkout</li>
+            </ul>
+        </div>
+        
+        <div class="search-section">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201807/ebay_2_0.png?stNU7RAjN8SjkOIxuqKWOW6qw6cNCmIu" class="logo"></img>
+            
+            <form class="search">
+                <input type="text" placeholder="search" name="search-box" class="search-box"></input>
+                <button type="submit" class="btn-search"><i class="fas fa-search"></i>GO</button>
+            </form>
+        </div>
+        
+        <div class="checkout-section">
+            <div class="checkout">
+                <span class="shopping-cart"><i class="fas fa-cart-arrow-down"></i></span> <span class="cartInfo">[ <span class="numOfItems">0</span>] items in cart</span>
+            </div>
+        </div>
+        
+        <div class="menu">
+            <ul>
+                <li>home</li>
+                <li>APS, UPS and BATTERIES</li>
+                <li>COMPUTER ACCESSORIES</li>
+                <li>CONSUMABLES</li>
+            </ul>
+        </div>
+        
+        <div class="header">
+        </div>
+        
+        <div class="best-courses-section">
+            <h1>best courses available here</h1>
+            
+            <div class="best-courses-card-section">
+                <div class="best-courses-cards">
+					
+					<% bestCourses.forEach(function(course){ %>
+
+						<div class="best-courses-card">
+							<div class= "card-title">
+								<%= course.title %>
+							</div>
+                        
+							<img src="<%= course.image %>" class="card-image">
+                        
+							<p class="card-description"><%= course.description %></p>
+                        
+							<div class="card-add-section">
+								<button type="submit" class="btn-add">add to cart</button>
+                        
+								<span class="card-price">cost INR <%= course.price %></span>    
+							</div>
+						</div>
+
+                    <% }); %>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="latest-courses-section">
+            <h1>Latest courses available</h1>
+            
+            <div class="best-courses-card-section">
+                <div class="best-courses-cards">
+                    
+					<% latestCourses.forEach(function(course){ %>
+
+						<div class="latest-courses-card">
+							<div class= "card-title">
+								<%= course.title %>
+							</div>
+                        
+							<img src="<%= course.image %>" class="card-image">
+                        
+							<p class="card-description"><%= course.description %></p>
+                        
+							<div class="card-add-section">
+								<button type="submit" class="btn-add">add to cart</button>
+                        
+								<span class="card-price">cost INR <%= course.price %></span>    
+							</div>
+						</div>
+
+                    <% }); %>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="sale-courses-section">
+            <h1>on sale</h1>
+            
+            <div class="best-courses-card-section">
+                <div class="best-courses-cards">
+                    
+					<% saleCourses.forEach(function(course){ %>
+
+						<div class="sale-courses-card">
+							<div class= "card-title">
+								<%= course.title %>
+							</div>
+                        
+							<img src="<%= course.image %>" class="card-image">
+                        
+							<p class="card-description"><%= course.description %></p>
+                        
+							<div class="card-add-section">
+								<button type="submit" class="btn-add">add to cart</button>
+                        
+								<span class="card-price">cost INR <%= course.price %></span>    
+							</div>
+						</div>
+
+                    <% }); %>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            
+            <div class="info">
+                <div class="info-header">INFORMATION</div>
+                
+                <ul>
+                    <li>CONTACT</li>
+                    <li>REGISTRATION</li>
+                    <li>LEGAL NOTICE</li>
+                    <li>TERMS AND CONDITIONS</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            
+            <div class="info">
+                <div class="info-header">OUR OFFERS</div>
+                
+                <ul>
+                    <li>NEW PRODUCTS</li>
+                    <li>TOP SELLERS</li>
+                    <li>SPECIAL OFFERS</li>
+                    <li>MANUFACTURERS</li>
+                    <li>SUPPLIERS</li>
+                </ul>
+            </div>
+            
+            <div class="social-media">
+                <div class="info-header">SOCIAL MEDIA</div>
+                
+                <ul>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>
