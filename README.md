@@ -3,4 +3,4 @@
 3. Unpack public.rar
 4. Setup the database using the schema file
 5. Start the server
-6. Visit localhost: 3030 on your browser
+6. Visit localhost: 3000 on your browser
